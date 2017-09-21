@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+
 
 var app = express();
 app.set('view engine', 'hbs');
@@ -23,15 +25,12 @@ app.use((req, res, next) => {
     });
 
 });
-
+/*
 app.use((req, res, next) => {
-
     res.render('maintance.hbs');
     //console.log('Error_: unable to append to server.log');
-
-
 });
-
+*/
 
 hbs.registerHelper('getCurrentYear', () => {
     return new Date().getFullYear();
@@ -62,7 +61,7 @@ app.get('/about', (req, res) => {
 app.get('/error', (req, res) => {
     res.send('Error unable to handle the request');
 });
-app.listen(3000, () => {
-    console.log('Server is up port:3000');
+app.listen(port, () => {
+    console.log('Server is Up on Port: '+port);
 });
 
