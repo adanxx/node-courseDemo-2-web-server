@@ -47,8 +47,8 @@ hbs.registerHelper('It', (text) => {
 app.get('/', (req, res) => {
     //res.send('<h1>Hello express!</h1>');
     res.render('Home.hbs', {
-        title: 'KEA Events:',
-        //pageTitle: 'Home Page',
+        title: 'HomePage:',
+        pageTitle: 'KEA Events:',
          message: 'Welcome to homepage:..',
         //currentYear: new Date().getFullYear()
         //
@@ -57,10 +57,20 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
+        title: 'Abou:',
         pageTitle: 'About Page',
         //currentYear: new Date().getFullYear() 
     });
 });
+
+app.get('/Contact', (req, res) => {
+    res.render('Contact.hbs', {
+        title: 'Contact:',
+        pageTitle: 'Contact',
+        //currentYear: new Date().getFullYear() 
+    });
+});
+
 
 app.get('/error', (req, res) => {
     res.send('Error unable to handle the request');
