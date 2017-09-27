@@ -28,7 +28,7 @@ h1{
     color: blue;
 
     margin-top: 10px;
-    font-size: 2.3em;
+    font-size: 2.1em;
     font-weight: 700;
 
 }
@@ -42,6 +42,7 @@ h2{
 
 p{
     color:#8f8f8f;
+    padding-left: 10px; 
 }
 
 
@@ -67,8 +68,9 @@ nav #nav-logo, nav #nav-title{
 
 #nav-logo {
     background:#fff;
-    padding:10px;
+    padding:8px;
     border: 1px solid #808080;
+    margin-right: 15px;
 }
 
 nav img{
@@ -81,7 +83,7 @@ nav ul{
 }
 nav li {
     float:left;
-    margin:0 5px;
+    margin:0px 5px;
     display:block;
 }
 
@@ -102,6 +104,7 @@ ul{
     margin-bottom: 18px;
     flex: 1;
     display: flex;
+    padding-right: 320px;
 }
 
 .greeting-content .subscribe a {
@@ -112,7 +115,8 @@ ul{
 }
 
 .subscribe{
-    margin-right: 100px;
+    margin-right: 13%;
+     text-align: center;
 
 }
 
@@ -131,9 +135,8 @@ ul{
 video {
     margin: 20px 30%;
     padding: 0px;
-    width: 30%;
     width: 40%;
-    height: 200px;
+    height: 50%;
     border: solid 1px #808080;
     background-image: url(../img/video_placeholder.jpg);
     background-size: 100% 100%;
@@ -175,38 +178,69 @@ video {
 
 
 /* after the h2 Text - break div of pictures*/
-.event {
-    display: inline-flex;
-    width: 700px;
-    margin-top: 10px;
-    margin-right: 30px;
-    align-items: center;
+
+section {
+    float:left;
+    margin:10px 0;
+
+    width:50%;
+    padding:0 25%
 }
 
-.content {
-    display: inline-flex;
-    margin-left: 40px;
-    flex: 1;
-    align-items: center;
-}
-
- img {
-    width: 100px;
-    height: 70px;
-    margin-left: 5px;
-}
-p {
-    padding-left: 10px;    
-}
-
-.placeholder{
-   /* width: 40%;*/
-    flex: 1;
-  
-}
-.flex-item{
+.img-1{
     float: left;
 }
+
+.l
+{
+    float:left;
+}
+
+.events
+{
+    width:200px;
+}
+
+.events li
+{
+    display:inline-block;
+    width:100%;
+    margin: 10px 0;
+}
+
+.events li * 
+{
+    float: left;
+}
+
+.events li img
+{
+    width:100px;
+    border:1px solid #808080;
+}
+
+.events li p
+{
+    padding:0 10px;
+}
+
+/* Break of div-2-img*/
+.row
+{
+    float:right;
+}
+
+.unlist-row-2 li img
+{
+    width:100px;
+    border-radius:10px;
+    padding:5px;
+}
+
+ul{
+    list-style-type: none;
+}
+
 
 /* Footer Sections*/
 .bottom-line{
@@ -252,6 +286,8 @@ p {
     align-content: flex-end;
 }
 
+
+
 /* Footer-div*/
 
 .footer {
@@ -273,5 +309,3 @@ p {
 .footer-text{
     color: #fff;    
 }
-
-

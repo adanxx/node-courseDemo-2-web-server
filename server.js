@@ -47,9 +47,9 @@ hbs.registerHelper('It', (text) => {
 app.get('/', (req, res) => {
     //res.send('<h1>Hello express!</h1>');
     res.render('Home.hbs', {
-        title: 'HomePage:',
+        title: 'Home:',
         pageTitle: 'KEA Events:',
-         message: 'Welcome to homepage:..',
+         message: 'Welcome to KEA Events..',
         //currentYear: new Date().getFullYear()
         //
     });
