@@ -57,8 +57,8 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
-        title: 'Abou:',
-        pageTitle: 'About Page',
+        title: 'About:',
+        pageTitle: 'About: This Site ',
         //currentYear: new Date().getFullYear() 
     });
 });
@@ -66,7 +66,7 @@ app.get('/about', (req, res) => {
 app.get('/Contact', (req, res) => {
     res.render('Contact.hbs', {
         title: 'Contact:',
-        pageTitle: 'Contact',
+        pageTitle: 'Contact: Information',
         //currentYear: new Date().getFullYear() 
     });
 });
