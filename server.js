@@ -7,7 +7,9 @@ const port = process.env.PORT || 3000;
 
 var app = express();
 app.set('view engine', 'hbs');
-hbs.registerPartials(__dirname + '/views/partials')
+
+hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerPartials(__dirname + '/public/css')
 app.use(express.static(__dirname + '/public'));
 
 app.use((req, res, next) => {
@@ -36,16 +38,18 @@ hbs.registerHelper('getCurrentYear', () => {
     return new Date().getFullYear();
 });
 
+
 hbs.registerHelper('It', (text) => {
     return text.toUpperCase();
 });
 
+
 app.get('/', (req, res) => {
     //res.send('<h1>Hello express!</h1>');
     res.render('Home.hbs', {
-        title: 'HomePage',
-        pageTitle: 'Home Page',
-        message: 'Welcome to homepage:..',
+        title: 'KEA Events:',
+        //pageTitle: 'Home Page',
+         message: 'Welcome to homepage:..',
         //currentYear: new Date().getFullYear()
         //
     });
@@ -61,6 +65,9 @@ app.get('/about', (req, res) => {
 app.get('/error', (req, res) => {
     res.send('Error unable to handle the request');
 });
+
+
+
 app.listen(port, () => {
     console.log('Server is Up on Port: '+port);
 });
